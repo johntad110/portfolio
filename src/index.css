@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,600;1,900&display=swap');
+@import url('https://rsms.me/inter/inter.css');
+@import url('https://fonts.googleapis.com/css2?family=Borel&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 2px 30px 0 rgba(31, 38, 135, 0.07);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.nav-link {
+  color: #000;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  @apply text-blue-600;
+}
+
+.nav-link:hover::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 2px;
+  background-color: #000;
+  transition: all 1s;
+}
+
+.nav-link:hover::after {
+  @apply bg-blue-600;
+  width: 100%;
+}
+
+.side-bar li {
+  @apply font-extralight text-2xl text-black hover:text-purple-700 hover:underline underline-offset-8 hover:pl-2 transition-all;
+}
+
+/* Tmeherte kal styles */
+.temeherte-kal h1 {
+  @apply md:mt-20 text-4xl font-bold relative mb-10;
+  width: fit-content;
+  text-shadow: 1px 1px 4px white;
+}
+
+.temeherte-kal h1::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  background-color: #fff;
+  transition: all 1s;
+}
+
+.temeherte-kal h1:hover::after {
+  width: 90%;
+}
+
+.temeherte-kal h2 {
+  @apply relative font-extralight text-3xl mb-2 mt-5 underline-offset-4 uppercase;
+}
+
+.temeherte-kal h2::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  transition: all 1s;
+}
+
+.temeherte-kal p {
+  @apply p-6 font-extralight;
+}
+
+.temeherte-kal p.paragraph {
+  @apply bg-gray-700;
+}
+
+/* AHRG styles */
+.ahrg h1 {
+  font-family: 'Borel', cursive;
+}
+
+.ahrg p {
+  font-family: 'Nova Round', cursive;
+}
+
+.ahrg button {
+  @apply p-4 bg-[#009d61] rounded-[8px] text-white transition-all;
+  box-shadow: 0 0 30px 5px rgb(0, 157, 97, 0.5);
+}
+
+.ahrg button:hover {
+  @apply shadow-2xl shadow-white bg-white text-[#009d61];
+}
+
+/* Contact section styles */
+.contact {
+  @apply bg-pink-500 flex flex-col md:flex-row;
+}
+
+.contact .contact-white {
+  @apply bg-gray-100 h-[100vw]  md:w-[50vw] md:h-[90vh] flex justify-center items-center;
+}
+
+.contact .contact-white .content {
+  @apply flex items-center justify-center transition-all font-extralight text-4xl hover:shadow-2xl hover:shadow-black hover:cursor-pointer;
+  height: 300px;
+  width: 300px;
+  border-radius: 100%;
+  border: 1px solid black;
+}
+
+.contact .contact-black {
+  @apply bg-black text-gray-100 md:w-[50vw] md:h-[90vh] flex justify-center items-center;
+}
+
+.contact .contact-black .content {
+  @apply flex items-center justify-center transition-all font-extralight text-4xl hover:shadow-2xl hover:shadow-purple-700 hover:border-black hover:cursor-pointer;
+  height: 300px;
+  width: 300px;
+  border-radius: 100%;
+  border: 2px solid white;
+}
+
+/* Contact form styles */
+.contact-form {
+  @apply my-12 py-[40px] px-[30px] rounded-sm relative lg:w-[50%];
+  border: 1px solid white;
+}
+
+.contact-form:hover {
+  @apply hover:border-none;
+}
+
+.contact-form .arrow {
+  @apply bg-white absolute top-0 left-0 h-[25px] w-[40px] flex justify-center items-center;
+  border-radius: 0 0 20px 0;
+  color: black !important;
+}
+
+.contact-form .arrow:hover {
+  cursor: pointer;
+  box-shadow: 0 5px 10px 10px #7e22ce;
+}
+
+.contact-form label,
+.contact-form .arrow {
+  @apply font-extralight text-lg text-white;
+}
+
+.contact input[type='text'],
+.contact textarea {
+  @apply bg-white  px-2 py-1 rounded-lg text-black;
+}
+
+.contact input[type='text'] {
+  @apply h-[40px];
+}
+
+.contact input:hover,
+.contact textarea:hover {
+  box-shadow: 0 0 20px 0 white;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+  box-shadow: 0 5px 20px 10px #7e22ce;
+}
+
+.contact input:focus-visible,
+.contact textarea:focus-visible {
+  @apply outline-none;
+}
+
+.contact input[type='submit'] {
+  @apply bg-white text-black p-3 rounded-lg mt-3;
+}
+
+.contact input[type='submit']:hover {
+  box-shadow: 0 0 20px 10px #7e22ce;
+}
+
+/* Lab styles */
+.project-buttons button {
+  @apply bg-gray-300 px-4 py-2 mt-4 ml-2 hover:bg-white transition-all;
+  border: 1px solid white;
+}
+
+.project-buttons button:hover {
+  box-shadow: 0 20px 50px -12px purple;
+  border: 1px solid black;
+}
