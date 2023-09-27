@@ -124,8 +124,11 @@ const Factmania = () => {
                 <img className="w-10/12 md:w-[6000px] rounded-lg shadow-2xl shadow-pink-600 hover:shadow-white hover:scale-[1.025] transition-all" src={factmania} alt="factmania" />
                 <div className="mt-12 md:mt-60 flex gap-4 md:gap-8">
                     <button
-                        className="transition-all p-4 bg-white border-2 text-black hover:bg-black hover:text-white">LIVE DEMO</button>
+                        onClick={() => openURL('https://johnsomething.pythonanywhere.com/')}
+                        className="transition-all p-4 bg-white border-2 text-black hover:bg-black hover:text-white"
+                        >LIVE DEMO</button>
                     <button
+                        onClick={() => openURL('https://github.com/johntad110/Factmania')}
                         className="p-4 transition-all bg-black border-2 text-white hover:bg-white hover:text-black"
                     >⭐ GITHUB</button>
                 </div>
