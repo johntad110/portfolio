@@ -6,6 +6,7 @@ import Works from '../components/Works'
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
 import { useRef, useState } from 'react'
+import TechIUse from '../components/TechIUse'
 
 const Home = () => {
     const welcome = ['W', 'E', 'L', 'C', 'O', 'M', 'E']
@@ -54,6 +55,7 @@ const Home = () => {
             </div>
             <Intro />
             <Skills />
+            <TechIUse />
             <Works
                 scrollToWroks={scrollToWroks}
                 worksRef={worksRef}
