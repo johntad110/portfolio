@@ -10,6 +10,7 @@ import Framer from '../assets/techiuse/framer.svg';
 import Git from '../assets/techiuse/git.svg';
 import GSAP from '../assets/techiuse/gsap.svg';
 import HF from '../assets/techiuse/hf.svg';
+import NextJs from '../assets/techiuse/nextjs.svg';
 import Ngnix from '../assets/techiuse/ngnix.svg';
 import Pytorch from '../assets/techiuse/pytorch.svg';
 import Rapid from '../assets/techiuse/rapid.svg';
@@ -36,6 +37,7 @@ const TechIUse = () => {
         Git,
         GSAP,
         HF,
+        NextJs,
         Ngnix,
         Pytorch,
         Rapid,
@@ -50,7 +52,7 @@ const TechIUse = () => {
     ];
 
     return (
-        <div className="flex flex-col items-center transition-all hover:cursor-none px-8">
+        <div className="flex flex-col items-center transition-all hover:cursor-none px-0">
             <h1 className="p-4 text-5xl font-extralight nav-link w-full text-center">Tech I Use</h1>
             <div className="wrapper py-4 w-full flex flex-wrap justify-center relative overflow-hidden">
                 {techIUse.map((e, idx) => (
